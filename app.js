@@ -1,5 +1,5 @@
 // app.js
-const KAKAO_API_KEY = '여기에_카카오_REST_API_키를_입력하세요'; // ★ 중요!
+const KAKAO_API_KEY = '6f9c8074b667a8a829d1ae343d459959'; 
 
 // 1. 다크모드 관리
 function initTheme() {
