@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>도서 검색 서비스</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">BookFinder</a>
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="책 제목, 저자 검색...">
+            <button type="submit">검색 🔍</button>
+        </form>
+        <div class="nav-links">
+            <a href="bookmark.html">Bookmark ★</a>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>"당신의 다음 책을 찾아보세요"</h1>
+            <p>카카오 API 기반 실시간 검색 및 나만의 보관함 서비스</p>
+        </section>
+        
+        <h2>오늘의 추천 도서</h2>
+        <div class="book-grid" id="recommend-grid">
+            <p>검색창을 이용해 도서를 찾아보세요!</p>
+        </div>
+    </main>
+
+    <footer>Copyright 2026. 전공과목 프로젝트 | Kakao Open API</footer>
+    <script src="app.js"></script>
+</body>
+</html>
