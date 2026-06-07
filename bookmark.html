@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>내 보관함</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">BookFinder</a>
+        <form id="search-form" class="search-form">
+            <input type="text" id="search-input" placeholder="책 제목, 저자 검색...">
+            <button type="submit">검색 🔍</button>
+        </form>
+        <div class="nav-links">
+            <a href="bookmark.html" style="text-decoration: underline;">Bookmark ★</a>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>내 즐겨찾기 보관함</h2>
+        <div class="book-grid" id="bookmark-grid">
+            </div>
+    </main>
+
+    <footer>Copyright 2026. 전공과목 프로젝트 | Kakao Open API</footer>
+    <script src="app.js"></script>
+    <script>
+        // 즐겨찾기 렌더링 로직
+        function renderBookmarks() {
+            const bookmarks = getBookmarks();
+            const grid = document.getElementById('bookmark-grid');
+            
+            if (bookmarks.length === 0) {
+                grid.innerHTML = "<p>아직 저장된 책이 없습니다. 검색을 통해 책을 추가해 보세요!</p>";
+                return;
+            }
+
+            grid.innerHTML = "";
+            bookmarks.forEach(book => {
+                const card = createBookCard(book);
+                grid.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', renderBookmarks);
+    </script>
+</body>
+</html>
